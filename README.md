@@ -1,9 +1,8 @@
 # Form Sample
 
 ## Description
-This project runs a Spring Boot based application server server with a simple form that collects user information (Name, Age, Title,
-Hometown).  
-When submitted, it displays the submitted entry along with a table of all previous submissions.
+This project runs a Spring Boot based application server server with a simple form that collects user information (Name,
+Age, Title, Hometown). When submitted, it displays the submitted entry along with a table of all previous submissions.
 
 ## Features
 - Server-side validation (Name and Title are required)

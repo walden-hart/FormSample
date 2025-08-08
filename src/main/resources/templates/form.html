@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Entry Form</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Data Entry Form</h1>
+
+<form th:action="@{/form}" th:object="${user}" method="post">
+    <div>
+        <label>Name: *</label>
+        <input type="text" th:field="*{name}" />
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></span>
+    </div>
+
+    <div>
+        <label>Age:</label>
+        <input type="number" th:field="*{age}" />
+    </div>
+
+    <div>
+        <label>Title: *</label>
+        <input type="text" th:field="*{title}" />
+        <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="error"></span>
+    </div>
+
+    <div>
+        <label>Hometown:</label>
+        <input type="text" th:field="*{hometown}" />
+    </div>
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</body>
+</html>

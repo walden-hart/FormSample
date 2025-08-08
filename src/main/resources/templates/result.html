@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Submission Result</title>
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Submission Confirmation</h1>
+
+<div class="submitted">
+    <p><strong>Name:</strong> <span th:text="${submittedUser.name}"></span></p>
+    <p><strong>Age:</strong> <span th:text="${submittedUser.age}">N/A</span></p>
+    <p><strong>Title:</strong> <span th:text="${submittedUser.title}"></span></p>
+    <p><strong>Hometown:</strong> <span th:text="${submittedUser.hometown}">N/A</span></p>
+</div>
+
+<hr/>
+
+<h2>Previous Submissions</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Title</th>
+        <th>Hometown</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}">Name</td>
+        <td th:text="${user.age}">Age</td>
+        <td th:text="${user.title}">Title</td>
+        <td th:text="${user.hometown}">Hometown</td>
+    </tr>
+    </tbody>
+</table>
+
+<br/>
+<a th:href="@{/form}">Submit another entry</a>
+</body>
+</html>

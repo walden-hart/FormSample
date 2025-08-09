@@ -10,6 +10,9 @@ Age, Title, Hometown). When submitted, it displays the submitted entry along wit
 - Clean, responsive styling using basic CSS
 - Built using Java, Spring Boot, and Thymeleaf
 
+## Prerequisites
+- Java JDK 21+
+
 ## Installation
 To build the project, clone the repository and run the following from the root directory:
 ### Linux or Mac
@@ -23,7 +26,7 @@ To build the project, clone the repository and run the following from the root d
 ## Usage
 ### Option 1: Running from the JAR file
 ```console
-java -jar target/form-sample-0.0.1-SNAPSHOT.jar
+java -jar target/FormSample-0.0.1-SNAPSHOT.jar
 ```
 ### Option 2: Run directly with Maven wrapper
 #### Linux or Mac
